@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Empty Webshop</title>
+    <script data-require="angular.js@*" data-semver="4.0.0"
+            src="https://code.angularjs.org/latest/angular.min.js"></script>
+    <script type="text/javascript" src="./Scripts/app.js"></script>
+    <script type="text/javascript" src="./Scripts/storeController.js"></script>
+    <script type="text/javascript" src="./Scripts/showHideController.js"></script>
+    <script type="text/javascript" src="./Scripts/fizz-buzz.js"></script>
+    <script type="text/javascript" src="./Scripts/stringReverse.js"></script>
+
+</head>
+<body>
+    <div ng-app="ecknoModule">
+        <div ng-controller="srController">
+            <input type="text" ng-model="value" />
+            <h1>{{value}}</h1>
+            <h2>{{reverseValue()}}</h2>
+        </div>
+        <div ng-controller="showHideController">
+            <input type="button" ng-click="toggleVisible()" value={{buttonText}} />
+            <div ng-show="showText" ng-controller="FizzBuzzController">
+                {{fizzText(0, 100, 7, 13)}}
+            </div>
+        </div>
+        <div ng-controller="storeController">
+            {{product}}
+
+        </div>
+    </div>
+
+    
+
+</body>
+</html>

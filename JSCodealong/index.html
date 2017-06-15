@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Index</title>
+    <style>
+        body{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+        .fizz{color: red;
+              background-color:#fbc4c4;
+              border-color:red;            
+        }
+        .buzz{color: blue;
+              background-color:#b4d6f9;
+              border-bottom-color:blue;
+        }
+        .fizzbuzz{font-weight:bold;
+                  color:blueviolet;
+                  background-color:#dec1f9;   
+                  border-color:blueviolet;
+        }
+        .empty{
+            border-color:#f3f0e5;
+        }
+        .empty, .fizz, .buzz, .fizzbuzz{
+            min-width:5em;
+            height:2em;
+            border-style: solid;
+            display: inline-block;
+            padding:0.5em;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        This is my web page.
+    </div>
+
+    <input type="number" id="start" placeholder="Från ..." />
+    <input type="number" id="end" placeholder="Till ..." />
+    <input type="number" id="fizz" placeholder="Fizz ..." />
+    <input type="number" id="buzz" placeholder="Buzz ..." />
+    <input type="button" id="buttonOK" value="OK" />
+    <div id="message"></div>
+    <script type="text/javascript" src="Scripts/fizz-buzz.js"></script>
+</body>
+</html>
