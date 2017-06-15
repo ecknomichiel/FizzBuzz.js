@@ -143,6 +143,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\showHideController.js" />
+    <Content Include="Scripts\simpleNav.js" />
     <Content Include="Scripts\storeController.js" />
     <Content Include="Scripts\stringReverse.js" />
     <Content Include="Scripts\_references.js" />

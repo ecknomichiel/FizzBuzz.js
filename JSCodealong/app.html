@@ -9,22 +9,42 @@
     <script type="text/javascript" src="./Scripts/showHideController.js"></script>
     <script type="text/javascript" src="./Scripts/fizz-buzz.js"></script>
     <script type="text/javascript" src="./Scripts/stringReverse.js"></script>
+    <script type="text/javascript" src="./Scripts/simpleNav.js"></script>
+    <style>
+        .menu li{
+            display:inline-block;
+            
+
+        }
+        .menu input{
+            height:2em;
+            width:7em;
+        }
+    </style>
 
 </head>
 <body>
-    <div ng-app="ecknoModule">
-        <div ng-controller="srController">
+    <div ng-app="ecknoModule" ng-controller="simpleNavController">
+        <div class="menu">
+            <ul>
+                <li ><input type="button" ng-click="onMenuclick('index')" value="Home"/></li>
+                <li><input type="button" ng-click="onMenuclick('page2')" value="Page2" /></li>
+                <li><input type="button" ng-click="onMenuclick('fizz')" value="Fizz-Buzz" /></li>
+            </ul>
+        </div>
+
+        <div ng-show="section=='index'" ng-controller="srController">
             <input type="text" ng-model="value" />
             <h1>{{value}}</h1>
             <h2>{{reverseValue()}}</h2>
         </div>
-        <div ng-controller="showHideController">
+        <div ng-show="section=='fizz'" ng-controller="showHideController">
             <input type="button" ng-click="toggleVisible()" value={{buttonText}} />
             <div ng-show="showText" ng-controller="FizzBuzzController">
                 {{fizzText(0, 100, 7, 13)}}
             </div>
         </div>
-        <div ng-controller="storeController">
+        <div ng-show="section=='product'" ng-controller="storeController">
             {{product}}
 
         </div>
